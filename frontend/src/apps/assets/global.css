@@ -1,0 +1,308 @@
+.c-bg {
+    background-color: #F7F6EB;
+}
+
+.c-bg-1 {
+    background-color: #101828;
+}
+
+.c-bg-2 {
+    background-color: #0E1624;
+}
+
+.c-bg-3 {
+    background-color: cornflowerblue;
+}
+
+.c-bg-4 {
+    background-color: rgba(100, 148, 237, 0.753);
+}
+
+.hightt {
+    width: 100vw;
+    height: 100vh !important;
+}
+.highttt {
+    min-height: 84vh;
+    max-height: fit-content;
+}
+
+.c-shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.368);
+}
+
+.fm {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.bg-image {
+    background-image: url("/src/apps/assets/images/bg1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-2 {
+    background-image: url("/src/apps/assets/images/bg2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-3 {
+    background-image: url("/src/apps/assets/images/bg3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-4 {
+    background-image: url("/src/apps/assets/images/bg4.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-5 {
+    background-image: url("/src/apps/assets/images/home1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-6 {
+    background-image: url("/src/apps/assets/images/home2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-image-7 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.back {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.fs-7 {
+    font-size: 90px;
+}
+
+.fs-8 {
+    font-size: 60px;
+}
+
+.fs-9 {
+    font-size: 25px;
+}
+
+.c-font-gr {
+    background: linear-gradient(aqua, yellow);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.hight {
+    height: 100vh;
+}
+
+ .hight-1{
+    height: 84vh !important;
+}
+
+.hight-2 {
+    height: 7vh;
+}
+
+.hight-3 {
+    height: 9vh;
+}
+
+.hight-4 {
+    height: 35vh;
+}
+
+.hight-6 {
+    height: 24vh;
+}
+
+.hight-5 {
+    height: 20vh;
+}
+
+.w-h {
+    width: 100%;
+    height: 100%;
+}
+
+.width {
+    width: 60px;
+}
+
+.abc {
+    scale: 0.9;
+    transition: 0.3s ease;
+}
+
+.abc:hover {
+    color: black !important;
+    scale: 1;
+    cursor: pointer;
+}
+
+.abc1 {
+    transition: 0.3s ease;
+}
+
+.abc1:hover {
+    color: black !important;
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.pro {
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: url("https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.c-pointer:hover {
+    cursor: pointer;
+    opacity: 100% !important;
+}
+
+.chover {
+    transition-duration: 500ms;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chover:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 500ms;
+    box-shadow: 0 0 10px black !important;
+    border: none !important;
+}
+
+@media (max-width: 500px) {
+    .hide {
+        display: none;
+    }
+
+    .fs-7 {
+        font-size: 35px;
+    }
+
+    .fs-4 {
+        font-size: 10px !important;
+    }
+
+    .mt-5 {
+        margin-top: 15px !important;
+    }
+
+    .t-al-c {
+        text-align: center !important;
+    }
+
+    .jus-cen {
+        justify-content: center !important;
+    }
+
+    .mtt {
+        margin-top: 10px;
+    }
+
+}
+
+.imggg {
+    height: 300px;
+}
+
+.imgggg {
+    width: 70px;
+    height: 40px;
+}
+
+.action {
+    transition: 0.3s ease;
+}
+
+.action:active {
+    scale: 1.1;
+}
+.action-1{
+    transition: 0.3s ease;
+}
+.action-1:active{
+    scale: 0.95;
+}
+
+.h-w {
+    height: 100%;
+    width: 100%;
+}
+
+.h-w-1 {
+    height: 50px;
+    width: 80px;
+}
+
+.poss {
+    top: 10px;
+    left: 10px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.hide-scrollbar {
+  scrollbar-width: none;  
+  -ms-overflow-style: none;   
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;              
+}
+
+.css-1pv2de5-MuiDayCalendar-weekContainer,.css-1rl1vrc-MuiDayCalendar-header{
+    justify-content: space-evenly !important;
+    margin-bottom: 40px !important;
+}
+.css-5wchs2-MuiDateCalendar-root{
+    height: 100% !important;
+    max-height: 100% !important;
+}
+.css-1n1xn3x-MuiPickersSlideTransition-root-MuiDayCalendar-slideTransition{
+    min-height: 500px !important;
+}
+.css-1nxbkmn-MuiPickersCalendarHeader-root{
+    margin-bottom: 40px !important;
+}
