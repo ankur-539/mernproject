@@ -20,7 +20,12 @@ function ModeratorTable(props) {
                         return (
                             <tr key={user._id}>
                                 <td className='border align-middle'>{user.username}</td>
-                                <td className='border align-middle'>{user.pass}</td>
+                                <td className='border align-middle' style={{
+                                    maxWidth: "100px",
+                                    whiteSpace: "nowrap",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis"
+                                }}>{user.pass}</td>
                                 <td className='border align-middle'>{user.dob}</td>
                             </tr>
                         )

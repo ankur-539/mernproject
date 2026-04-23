@@ -1,4 +1,5 @@
 import mymodel from "../schema/myschema.js"
+import bcrypt from "bcrypt";
 
 
 export const mycontrol = async (req, res) => {
@@ -17,6 +18,7 @@ export const user = async (req, res) => {
 
 export const userragistor = async (req, res) => {
     const { username, pass, userphone, profileurl, dob, emailid, gender, role } = req.body;
+    const dcrptpass = bcrypt.hashSync(pass,8);
     if (username == "") {
         res.status(200).json({ msg: "username is required", mystatus: 420 })
     }
@@ -25,7 +27,7 @@ export const userragistor = async (req, res) => {
         res.status(200).json({ msg: "Already exist", mystatus: 430 })
     }
     else {
-        const newdata = await mymodel.insertOne({ username, pass, userphone, profileurl, dob, emailid, gender, role });
+        const newdata = await mymodel.insertOne({ username, pass:dcrptpass, userphone, profileurl, dob, emailid, gender, role });
         res.status(200).json({ msg: "new user added", user: newdata, mystatus: 250 })
     }
 }
@@ -42,11 +44,13 @@ export const userlogin = async (req, res) => {
     }
 
     try {
-        const checkEmail = await mymodel.findOne({ emailid });
+        const checkEmail = await mymodel.findOne({ emailid:emailid });
+        console.log(checkEmail)
+        const isMatch = await bcrypt.compare(pass, checkEmail.pass);
         if (!checkEmail) {
             return res.json({ msg: "User not found", mystatus: 430 });
         }
-        if (checkEmail.pass !== pass) {
+        if (!isMatch) {
             return res.json({ msg: "Wrong password", mystatus: 450 });
         }
         return res.json({ msg: "Welcome", mystatus: 200 });

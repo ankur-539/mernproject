@@ -26,7 +26,7 @@ function UserSignupDetails() {
         })
     }
     const showPrev = (id) => {
-        axios.get(`http://localhost:7676/show/${id}`).then((res) => {   
+        axios.get(`http://localhost:7676/show/${id}`).then((res) => {
             setPrev(res.data.data);
         })
     }
@@ -83,19 +83,29 @@ function UserSignupDetails() {
                         {userData.map((e) => {
                             return (
                                 <tr key={e._id}>
-                                    <th scope="row" className="border align-middle">{e._id}</th>
+                                    <th scope="row" className="border align-middle" style={{
+                                        maxWidth: "100px",
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis"
+                                    }}>{e._id}</th>
                                     <td className="border  align-middle">{e.username}</td>
                                     <td className="border  align-middle">{e.emailid}</td>
                                     <td className="border  align-middle">{e.userphone}</td>
                                     <td className="border  align-middle">{e.dob}</td>
-                                    <td className="border  align-middle">{e.pass}</td>
+                                    <td className="border  align-middle" style={{
+                                        maxWidth: "100px",
+                                        whiteSpace: "nowrap",
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis"
+                                    }}>{e.pass}</td>
                                     <td className="border  align-middle">{e.gender}</td>
                                     <td className="border  align-middle">{e.role}</td>
                                     <td className="border  align-middle"> <img src={e.profileurl} width={40} alt={e.username} /> </td>
                                     <td className="border ">
                                         <span className="badge bg-white text-primary fs-5 cursor action m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => showPrev(e._id)}><FaEye /></span>
                                         <span className="badge bg-white text-danger fs-5 cursor action m-1" onClick={() => deleteUdata(e._id)}><FaDeleteLeft /></span>
-                                        <Link to={'useredit/'+e._id} className="badge bg-white text-success fs-5 cursor action m-1"><FaRegEdit /></Link>
+                                        <Link to={'useredit/' + e._id} className="badge bg-white text-success fs-5 cursor action m-1"><FaRegEdit /></Link>
                                     </td>
                                 </tr>
                             )

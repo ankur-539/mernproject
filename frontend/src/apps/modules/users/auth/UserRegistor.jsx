@@ -90,9 +90,9 @@ export default function UserRegistor() {
                                     <label className="form-label">Role</label>
                                     <select className='form-select' {...register("role", { required: true })} >
                                         <option value="" hidden>Select</option>
-                                        <option value="Male">User</option>
-                                        <option value="Female">Admin</option>
-                                        <option value="Other">Super Admin</option>
+                                        <option value="User">User</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Super Admin">Super Admin</option>
                                     </select>
                                     {errors.gender && (<p className='text-danger m-0'>Select One</p>)}
                                 </div>
