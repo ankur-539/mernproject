@@ -45,7 +45,7 @@ export const userlogin = async (req, res) => {
 
     try {
         const checkEmail = await mymodel.findOne({ emailid:emailid });
-        console.log(checkEmail)
+        // console.log(checkEmail)  
         const isMatch = await bcrypt.compare(pass, checkEmail.pass);
         if (!checkEmail) {
             return res.json({ msg: "User not found", mystatus: 430 });

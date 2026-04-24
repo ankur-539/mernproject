@@ -29,7 +29,7 @@ function Userlogin() {
 
     const loginFormSubmit = () => {
         axios.post("http://localhost:7676/login", login).then((e) => {
-            console.log(e)
+            // console.log(e)
             if (e.data.mystatus === 260) {
                 toast.error(e.data.msg, { autoClose: 2000 })
             }
